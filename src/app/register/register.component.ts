@@ -14,6 +14,8 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
   form = {
    firstName: null,
    lastName: null,
@@ -22,7 +24,19 @@ export class RegisterComponent implements OnInit {
   };
 
   signUp() {
+    this._userService.registerUser(this.form).subscribe( (res: any)=> {
+      console.log(res);
+      sessionStorage.setItem('token', res.token);
+      sessionStorage.setItem('userId', res.userId);
+      this._userService.firstName = res.firstName;
+      this._userService.isLoggedIn = true;
+      this.goToDash();
+    })
     
+  };
+
+  goToDash() {
+    this.router.navigate(['/home']);
   };
 
 }
