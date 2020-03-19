@@ -10,23 +10,28 @@ import { MainComponent } from './main/main.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
-
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { UserService } from './user.service'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ClarityModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule, 
+    FormsModule
+  
   ],
-  providers: [AppComponent],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
