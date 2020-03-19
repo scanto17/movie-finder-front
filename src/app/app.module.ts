@@ -9,13 +9,15 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
