@@ -8,6 +8,8 @@ import { MovieService } from '../movie.service'
 })
 export class MainComponent implements OnInit {
 
+imageUrl = "https://image.tmdb.org/t/p/w500"
+
   constructor(public _movieService: MovieService) { }
 
   ngOnInit(): void {

@@ -41,13 +41,6 @@ export class MovieService {
         })
     }
   
-    getPoster(){
-      return this._http.get(`${this.baseUrl}/movie/{movie_id}/images?api_key=${this.api_key}&language=en-US`)
-    }
-
-    getPosterRequest(posterID){
-
-    }
 
     getSearch(query){
       this._http.get(`${this.baseUrl}/3/search/movie?api_key=${this.api_key}&language=en-US&query=${query}&page=1&include_adult=false`)
