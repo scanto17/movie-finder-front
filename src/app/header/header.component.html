@@ -1,15 +1,22 @@
 <header class="header-6">
     <div class="branding">
-        <font size="6" color="white">Film Finder</font> 
+        <a routerLink="main">
+            <font size="6" color="white">Film Finder</font> 
+        </a>
     </div>
     <div class="header-nav">
-        <a href="javascript://" class="active nav-link nav-text">Search Films</a>
-        <a href="javascript://" class="nav-link nav-text">Genre</a>
+        <a routerLink="search" class="active nav-link nav-text">Search Films</a>
+
     </div>
     <div class="header-actions">
-        <a href="javascript://" class="nav-link nav-icon" aria-label="settings">
+        <a href="javascript://" class="nav-link nav-icon" aria-label="login">
             <clr-icon shape="cog"></clr-icon>
         </a>
+    </div>
+    <div class = "header-login">
+        
+        <a routerLink="login" class="active nav-link nav-text"> Login</a><br>
+        <a routerLink="register" class="active nav-link nav-text"> Register</a>
     </div>
 </header>
 
@@ -19,7 +26,7 @@
         <nav class="sidenav">
             <section class="sidenav-content">
                 <a href="..." class="nav-link active">
-                    Top Rated
+                    Most Popular
                 </a>
                 <a href="..." class="nav-link">
                     Favorites
@@ -35,20 +42,55 @@
                 <section class="nav-group">
                     <input id="tabexample2" type="checkbox">
                     <label for="tabexample2">Genres</label>
-                    <ul class="nav-list">
-                        <li><a class="nav-link">Action/Adventure</a></li>
-                        <li><a class="nav-link">Comedy</a></li>
-                        <li><a class="nav-link active">Drama</a></li>
-                        <li><a class="nav-link">Romance</a></li>
-                        <li><a class="nav-link">Classic</a></li>
-                        <li><a class="nav-link">Science Fiction</a></li>
-                        <li><a class="nav-link">Sports</a></li>
+                    <ul class="nav-list">     
+                        <li *ngFor = 'let genre of movieGenre' ><a class="nav-link" (click)="getSpecGenre(genre.id)">{{genre.name}}</a></li>
                     </ul>
                 </section>
             </section>
         </nav>
         <div class="content-area">
-            ...
+            
+             <div class="clr-row">
+                <div class="clr-col-lg-6 clr-col-12">
+                    <router-outlet></router-outlet>
+                    <a href="..." class="card clickable">
+                        <div class="card-img">
+                            <img src="https://api.themoviedb.org/3/movie/343611?api_key=88206dbb514dc1a2bd096a5434aaeebd">
+                        </div>
+                        <div class="card-block">
+                            <p class="card-text">
+                                ...
+                            </p>
+                        </div>
+                    </a>
+                </div>
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

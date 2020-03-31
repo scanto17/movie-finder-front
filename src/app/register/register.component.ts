@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
   };
 
   goToDash() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/main']);
   };
 
 }

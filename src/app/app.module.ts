@@ -13,6 +13,8 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './user.service'
+import { MovieService } from './movie.service';
+import { SearchComponent } from './search/search.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { UserService } from './user.service'
     HeaderComponent,
     MainComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,7 @@ import { UserService } from './user.service'
     FormsModule
   
   ],
-  providers: [UserService],
+  providers: [UserService, MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
