@@ -14,7 +14,8 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './user.service'
 import { MovieService } from './movie.service';
-import { SearchComponent } from './search/search.component'
+import { SearchComponent } from './search/search.component';
+import { ProfileComponent } from './profile/profile.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SearchComponent } from './search/search.component'
     MainComponent,
     RegisterComponent,
     LoginComponent,
-    SearchComponent
+    SearchComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

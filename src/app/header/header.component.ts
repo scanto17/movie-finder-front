@@ -34,13 +34,6 @@ export class HeaderComponent implements OnInit {
     this._movieService.getGenreRequest(genre)
   }
 
-getPoster(){
-  this._movieService.getPoster().subscribe (  (res : any) => {
-    console.log(res)
-    this.moviePoster = res.posters;
-  }, err => {
-    // err handling
 
-  })
 }
-}
+
