@@ -6,20 +6,27 @@
         </a>
     </div>
     <div class="header-nav">
-        <a routerLink="search" class="active nav-link nav-text">Search Films 
+        <a routerLink="search" class="active nav-link nav-text"><font color = "orange">Search Films</font>
             
         </a>
 
     </div>
     <div class="header-actions">
-        <a href="javascript://" class="nav-link nav-icon" aria-label="login">
-            <clr-icon shape="user"></clr-icon>
-        </a>
+        <clr-dropdown>
+            <button class="nav-icon" clrDropdownTrigger aria-label="toggle settings menu">
+                <clr-icon shape="user"></clr-icon>
+                <clr-icon shape="caret down"></clr-icon>
+            </button>
+            <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+                <a routerLink="profile" clrDropdownItem>Account</a>
+                <a routerLink="..." clrDropdownItem>Log out</a>
+            </clr-dropdown-menu>
+        </clr-dropdown>
     </div>
     <div class = "header-login">
         
-        <a routerLink="login" class="active nav-link nav-text"> <font color = "white"> Login</font></a><br>
-        <a routerLink="register" class="active nav-link nav-text"> <font color = "white">Register</font></a>
+        <a routerLink="login" class="active nav-link nav-text"> <font color = "orange"> Login</font></a><br>
+        <a routerLink="register" class="active nav-link nav-text"> <font color = "orange">Register</font></a>
     </div>
 </header>
 

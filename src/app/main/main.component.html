@@ -1,4 +1,4 @@
-<button (click) = 'getMovies()'>Find movie</button>
+
 <div *ngFor = 'let movie of _movieService.currentMovies'>
     <h2>{{movie.title}}</h2>
     <img src = "{{imageUrl + movie.poster_path}}">

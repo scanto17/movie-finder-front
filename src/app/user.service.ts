@@ -8,6 +8,7 @@ export class UserService {
   baseUrl: string = "http://localhost:3000/api/"; 
   appUserUrl: string = "appUsers"
   firstName: String
+  lastName: String
   isLoggedIn = false;
   loginUrl = "appUsers/login"
 

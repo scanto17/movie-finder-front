@@ -23,7 +23,9 @@ export class LoginComponent implements OnInit {
     this._userService.loginUser(this.form).subscribe( (res: any)=> {
       sessionStorage.setItem('token', res.token);
       sessionStorage.setItem('userId', res.userId);
-      this._userService.firstName = res.firstName;
+      this._userService.firstName = res.userData.firstName;
+      this._userService.lastName = res.userData.lastName;
+      console.log (res)
       this._userService.isLoggedIn = true;
       this.goToDash();
     })
