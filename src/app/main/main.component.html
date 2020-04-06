@@ -1,7 +1,8 @@
 
 <div *ngFor = 'let movie of _movieService.currentMovies'>
     <h2>{{movie.title}}</h2>
-    <h4>{{movie.release_date}}</h4>
+    <h4><font size="4" color = orange>{{movie.release_date}}</font></h4>
+    
     <img src = "{{imageUrl + movie.poster_path}}">
     <h3>{{movie.overview}}</h3><br>
     <button (click) = "favoriteMovie(movie)" *ngIf = "_userService.isLoggedIn" >Favorite</button>
