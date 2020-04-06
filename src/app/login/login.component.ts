@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem('userId', res.userId);
       this._userService.firstName = res.userData.firstName;
       this._userService.lastName = res.userData.lastName;
-      console.log (res)
+      console.log (res) 
       this._userService.isLoggedIn = true;
       this.goToDash();
     })
