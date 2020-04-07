@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../movie.service'
-
+import { UserService } from '../user.service'
 
 @Component({
   selector: 'app-header',
@@ -10,7 +10,7 @@ import { MovieService } from '../movie.service'
 export class HeaderComponent implements OnInit {
   moviePoster: any;
 
-  constructor(private _movieService: MovieService) { }
+  constructor(private _movieService: MovieService, private_UserService: UserService) { }
 
   ngOnInit(): void {
     this.getGenres();

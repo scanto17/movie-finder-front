@@ -1,11 +1,13 @@
 
 <div *ngFor = 'let movie of _movieService.currentMovies'>
-    <h2>{{movie.title}}</h2>
-    <h4><font size="4" color = orange>{{movie.release_date}}</font></h4>
-    
-    <img src = "{{imageUrl + movie.poster_path}}">
-    <h3>{{movie.overview}}</h3><br>
-    <button (click) = "favoriteMovie(movie)" *ngIf = "_userService.isLoggedIn" >Favorite</button>
+    <div style="text-align: center;">
+        <h2><font size =9><u>{{movie.title}}</u></font></h2>
+            <h3><font size ="4">Average Rating:</font><font color = orange> {{movie.vote_average}}</font></h3>
+                 <h4><font size="4">Released: </font><font color = orange>{{movie.release_date}}</font></h4>
+                    <img src = "{{imageUrl + movie.poster_path}}">
+    </div>
+        <h3>{{movie.overview}}</h3><br>
+         <button (click) = "favoriteMovie(movie)" *ngIf = "_userService.isLoggedIn" >Favorite</button>
 </div>
 
 <!-- https://image.tmdb.org/t/p/w500 -->

@@ -24,7 +24,7 @@ imageUrl = "https://image.tmdb.org/t/p/w500"
         movieTitle : movie.title,
         thirdPartyMovieId : movie.id,
         movieGenre : movie.genre_ids,
-        movieOverview : movie.overview
+        
     }
     this._userService.favMovie(favMovieObj)
     
